@@ -1,3 +1,7 @@
+:root {
+  --color-blue: #00acdc;
+}
+
 body {
   margin: 0;
   font-family: Roboto, sans-serif;
@@ -5,38 +9,24 @@ body {
   font-style: normal;
 }
 
-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 50px;
 }
 
-ul {
+.nav__list {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-img {
+.logo-img {
   display: block;
   width: 40px;
   height: 40px;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-  font-size: 12px;
-}
-
-a:hover {
-  color: #00acdc;
-}
-
-.nav li:not(:first-child) {
-  margin-left: 20px;
 }
 
 .nav__link {
@@ -46,10 +36,21 @@ a:hover {
   justify-content: center;
   position: relative;
   text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+.nav__link:hover {
+  color: var(--color-blue);
+}
+
+.nav .nav__item:not(:first-child) {
+  margin-left: 20px;
 }
 
 .nav__link.is-active {
-  color: #00acdc;
+  color: var(--color-blue);
 }
 
 .nav__link.is-active::after {
@@ -59,5 +60,5 @@ a:hover {
   border-radius: 8px;
   height: 4px;
   width: 100%;
-  background-color: #00acdc;
+  background-color: var(--color-blue);
 }
